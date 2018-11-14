@@ -6,7 +6,9 @@
 
 **应用效果图:**
 
-![服务器端](https://images2017.cnblogs.com/blog/1068222/201801/1068222-20180101204506862-1085498701.png)
+<img src="https://images2017.cnblogs.com/blog/1068222/201801/1068222-20180101204506862-1085498701.png" style="zoom:40%" />
+
+​										      **服务器端**
 
 ### 所需权限：
 
@@ -20,9 +22,8 @@
 
 **应用效果图:**
 
-![客户端](https://images2017.cnblogs.com/blog/1068222/201801/1068222-20180101203940799-626447183.png)   
-
-
+<img src="https://images2017.cnblogs.com/blog/1068222/201801/1068222-20180101203940799-626447183.png" style="zoom:40%" />
+​										      **客户端**
 
 ​	当用户单击该程序界面中的“发送”按钮后,程序将会把nput输入框中的内容发送给clientthread的 rehandle对象, clientThread负责将用户输入的内容发送给服务器。为了避免UI线程被阻塞,该程序将建立网络连接、与网络服务器通信等工作都交给Client thread线程完成。
 
@@ -30,6 +31,12 @@
 
 ​	ClientThread线程的功能是不断的获取Soket输出流中的内容，当读到Socket输入流中内容后，便通过Handler对象发送一条消息，消息负责携带读到的数据。该线程还负责读取UI线程发送的消息，接收消息后，该子线程负责将消息中携带的数据发送到远程服务器。
 
-### **ClientThread子线程中Looper学习：**
+### ClientThread子线程中Looper学习：
 
 ![img](https://images2017.cnblogs.com/blog/1068222/201801/1068222-20180101212641831-414667134.png)
+
+传送门：
+
+[客户端](https://github.com/li-fengjie/MultiThreadClient)
+
+[服务器端](https://github.com/li-fengjie/ServerDemo)
